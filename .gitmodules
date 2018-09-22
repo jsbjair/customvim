@@ -198,3 +198,6 @@
 	path = bundle/vim-argwrap
 	url = git://github.com/FooSoft/vim-argwrap.git
 	branch = master
+[submodule "bundle/vim-polyglot"]
+	path = bundle/vim-polyglot
+	url = https://github.com/sheerun/vim-polyglot
