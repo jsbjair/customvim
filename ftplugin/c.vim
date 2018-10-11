@@ -1,8 +1,5 @@
 " Set clang as the default compiler
-compiler clang
+compiler gcc
 
-set tabstop=2
-set shiftwidth=2
-
-let g:syntastic_cpp_compiler = 'clang'
+let g:syntastic_cpp_compiler = 'gcc'
 let g:syntastic_cpp_compiler_options = '-Wall -pedantic'
