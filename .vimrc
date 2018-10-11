@@ -182,7 +182,7 @@ if &t_Co >= 256 || has("gui_running")
     let g:gruvbox_italic=1
 
     " Default theme
-    colorscheme gruvbox
+    colorscheme SlateDark
 
     set background=dark
 
@@ -266,16 +266,16 @@ nmap <silent> <leader>ev :tabnew<CR>:e $MYVIMRC<CR>
 nmap <silent> <leader>sv :tabnew<CR>:so $MYVIMRC<CR>
 
 " Change ; to :
-nnoremap ; :
+"nnoremap ; :
 
 " Disable arrow for normal and visual modes
-map <up> <nop>
-map <down> <nop>
-map <left> <nop>
-map <right> <nop>
+"map <up> <nop>
+"map <down> <nop>
+"map <left> <nop>
+"map <right> <nop>
 
 " Unmap suspend function
-nmap <silent> <c-z> <nop>
+"nmap <silent> <c-z> <nop>
 
 " Remove ^M from DOS file format
 nnoremap <leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm
@@ -302,8 +302,8 @@ nnoremap <silent> <F8> :execute RotateColorTheme()<CR>
 nnoremap <space> za
 
 " Toggle NERDTree
-nnoremap <silent> <C-k><C-b> :NERDTreeTabsToggle<CR>
-inoremap <silent> <C-k><C-b> <ESC>:NERDTreeTabsToggle<CR>:wincmd l<CR>i
+nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
+inoremap <silent> <F9> <ESC>:NERDTreeTabsToggle<CR>:wincmd l<CR>i
 
 inoremap <C-K> <ESC>ddi
 
@@ -366,10 +366,24 @@ map <C-\> :tab split<CR>:exec("tag ".expand("<cword>"))<CR>
 map <A-]> :vsp <CR>:exec("tag ".expand("<cword>"))<CR>
 
 " Search the word definition in Zeal
-nnoremap <leader>z :!zeal --query "<cword>"&<CR><CR>
+nnoremap gZ :!zeal "<cword>"&<CR><CR>
+
+" Open CtrlP to search for tags in buffer
+nnoremap <silent> <leader>fb :CtrlPBufTagAll<CR>
+
+" Toggle Tagbar
+nnoremap <silent> <F4> :TagbarToggle<CR>
+
+" Toggle Gundo
+nnoremap <silent> <F5> :GundoToggle<CR>
 " }}}
 
 " Other setup " {{{
 " Setup autocomand
 au CompleteDone * pclose
 " }}}
+
+" Set mapping timeout
+set timeoutlen=1000
+set ttimeoutlen=10
+
