@@ -48,7 +48,7 @@
 	branch = master
 [submodule "bundle/nerdtree-git"]
 	path = bundle/nerdtree-git
-	url = git://github.com/Xuyuanp/nerdtree-git-plugin.git
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin.git
 	branch = master
 [submodule "bundle/nerdtree-tabs"]
 	path = bundle/nerdtree-tabs
@@ -120,19 +120,19 @@
 	branch = master
 [submodule "bundle/yajs"]
 	path = bundle/yajs
-	url = git://github.com/othree/yajs.vim.git
+	url = https://github.com/othree/yajs.vim.git
 	branch = master
 [submodule "bundle/typescript-vim"]
 	path = bundle/typescript-vim
-	url = git://github.com/leafgarland/typescript-vim.git
+	url = https://github.com/leafgarland/typescript-vim.git
 	branch = master
 [submodule "bundle/tsuquyomi"]
 	path = bundle/tsuquyomi
-	url = git://github.com/Quramy/tsuquyomi.git
+	url = https://github.com/Quramy/tsuquyomi.git
 	branch = master
 [submodule "bundle/vimproc"]
 	path = bundle/vimproc
-	url = git://github.com/Shougo/vimproc.vim.git
+	url = https://github.com/Shougo/vimproc.vim.git
 	branch = master
 [submodule "bundle/vim-javascript"]
 	path = bundle/vim-javascript
