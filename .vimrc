@@ -386,4 +386,4 @@ au CompleteDone * pclose
 " Set mapping timeout
 set timeoutlen=1000
 set ttimeoutlen=10
-
+" set keywordprg=/opt/man.sh
