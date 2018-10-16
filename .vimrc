@@ -304,6 +304,7 @@ nnoremap <space> za
 " Toggle NERDTree
 nnoremap <silent> <F9> :NERDTreeTabsToggle<CR>
 inoremap <silent> <F9> <ESC>:NERDTreeTabsToggle<CR>:wincmd l<CR>i
+nnoremap <silent> <leader><F9> :NERDTreeFind<CR>
 
 inoremap <C-K> <ESC>ddi
 
