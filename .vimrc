@@ -387,4 +387,7 @@ au CompleteDone * pclose
 " Set mapping timeout
 set timeoutlen=1000
 set ttimeoutlen=10
+" Set column color
+highlight ColorColumn ctermbg=0 guibg=lightgrey
+
 " set keywordprg=/opt/man.sh
