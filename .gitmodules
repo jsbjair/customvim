@@ -209,3 +209,7 @@
 	path = bundle/vim-polyglot
 	url = https://github.com/sheerun/vim-polyglot
 	branch = master
+[submodule "bundle/vim-lsp"]
+	path = bundle/vim-lsp
+	url = https://github.com/prabirshrestha/vim-lsp.git
+	branch = master
