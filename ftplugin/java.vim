@@ -1,3 +1,5 @@
+let s:lombok_path = $HOME . '/lsp/lombok.jar'
+let $JAVA_TOOL_OPTIONS = '-javaagent:'. s:lombok_path
 if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar'))
     au User lsp_setup call lsp#register_server({
         \ 'name': 'eclipse.jdt.ls',
@@ -13,7 +15,7 @@ if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.e
         \     '-jar',
         \     expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.600.v20191014-2022.jar'),
         \     '-configuration',
-        \     expand('~/lsp/eclipse.jdt.ls/config_win'),
+        \     expand('~/lsp/eclipse.jdt.ls/config_linux'),
         \     '-data',
         \     getcwd()
         \ ]},

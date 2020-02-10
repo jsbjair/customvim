@@ -390,4 +390,8 @@ set ttimeoutlen=10
 " Set column color
 highlight ColorColumn ctermbg=0 guibg=lightgrey
 
+set foldmethod=expr
+  \ foldexpr=lsp#ui#vim#folding#foldexpr()
+  \ foldtext=lsp#ui#vim#folding#foldtext()
+
 " set keywordprg=/opt/man.sh
