@@ -154,22 +154,6 @@
 	path = bundle/phpcd
 	url = https://github.com/lvht/phpcd.vim.git
 	branch = master
-[submodule "bundle/deoplete.nvim"]
-	path = bundle/deoplete.nvim
-	url = https://github.com/Shougo/deoplete.nvim.git
-	branch = master
-[submodule "bundle/nvim-yarp"]
-	path = bundle/nvim-yarp
-	url = https://github.com/roxma/nvim-yarp.git
-	branch = master
-[submodule "bundle/vim-hug-neovim-rpc"]
-	path = bundle/vim-hug-neovim-rpc
-	url = https://github.com/roxma/vim-hug-neovim-rpc.git
-	branch = master
-[submodule "bundle/deoplete-ternjs"]
-	path = bundle/deoplete-ternjs
-	url = https://github.com/carlitux/deoplete-ternjs.git
-	branch = master
 [submodule "bundle/clang_complete"]
 	path = bundle/clang_complete
 	url = https://github.com/Rip-Rip/clang_complete.git
