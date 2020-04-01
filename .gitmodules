@@ -209,3 +209,6 @@
 	path = bundle/asyncomplete-lsp.vim
 	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
 	branch = master
+[submodule "bundle/tmuxline.vim"]
+	path = bundle/tmuxline.vim
+	url = https://github.com/edkolev/tmuxline.vim.git
