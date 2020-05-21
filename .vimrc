@@ -182,7 +182,7 @@ if &t_Co >= 256 || has("gui_running")
     let g:gruvbox_italic=1
 
     " Default theme
-    colorscheme SlateDark
+    colorscheme solarized
 
     set background=dark
 
@@ -354,9 +354,6 @@ map <leader>v :e <C-R>=expand("%:p:h") . "/"<CR>
 " Toggle spell check
 map <leader>ss :set spell!<CR>
 
-" Select all
-map <C-a> <esc>ggVG<CR>
-
 " Copy shortcut
 vnoremap <C-c> "+y
 
@@ -388,7 +385,9 @@ au CompleteDone * pclose
 set timeoutlen=1000
 set ttimeoutlen=10
 " Set column color
-highlight ColorColumn ctermbg=0 guibg=lightgrey
+hi ColorColumn guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
+
+hi VertSplit guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
 
 set foldmethod=expr
   \ foldexpr=lsp#ui#vim#folding#foldexpr()
@@ -404,3 +403,13 @@ let g:airline#extensions#tabline#show_tab_type = 1
 let g:airline#extensions#tabline#show_close_button = 0
 let g:airline#extensions#tabline#show_buffers = 0
 let g:airline#extensions#tabline#show_splits = 0
+
+" Syntastic
+let g:syntastic_mode_map = {
+     \ "mode": "passive",
+     \ "active_filetypes": ["java", "php", "python", "javascript"],
+     \ "passive_filetypes": ["java", "php", "python", "javascript"] }
+
+" vim-lsp
+let g:lsp_auto_enable = 0
+
