@@ -1,9 +1,10 @@
 let s:lombok_path = $HOME . '/lsp/lombok.jar'
 let $JAVA_TOOL_OPTIONS = '-javaagent:'. s:lombok_path
+let s:java_lsp_server = {'cmd': '/bin/false'}
 if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar'))
-    au User lsp_setup call lsp#register_server({
+    let s:java_lsp_server = {
         \ 'name': 'eclipse.jdt.ls',
-        \ 'cmd': {server_info->[
+        \ 'cmd': [
         \     'java',
         \     '-Declipse.application=org.eclipse.jdt.ls.core.id1',
         \     '-Dosgi.bundles.defaultStartLevel=4',
@@ -18,7 +19,12 @@ if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.e
         \     expand('~/lsp/eclipse.jdt.ls/config_linux'),
         \     '-data',
         \     getcwd()
-        \ ]},
+        \ ],
         \ 'whitelist': ['java'],
-        \ })
+        \ }
 endif
+
+let g:LanguageClient_serverCommands = {
+    \ 'java': s:java_lsp_server['cmd'],
+    \ }
+
