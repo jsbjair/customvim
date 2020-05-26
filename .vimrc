@@ -413,3 +413,8 @@ let g:syntastic_mode_map = {
 " vim-lsp
 let g:lsp_auto_enable = 0
 
+" mark current line
+hi Mark ctermfg=0 ctermbg=226
+nnoremap <silent> ml :call matchadd('Mark', '\%'.line('.').'l')<CR>
+nnoremap <silent> mL :call clearmatches('Mark')<CR>
+let g:SignatureMarkTextHLDynamic = 1
