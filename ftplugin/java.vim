@@ -24,7 +24,7 @@ if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.e
         \ }
 endif
 
-let g:LanguageClient_serverCommands = {
-    \ 'java': s:java_lsp_server['cmd'],
-    \ }
+"let g:LanguageClient_serverCommands = {
+"    \ 'java': s:java_lsp_server['cmd'],
+"    \ }
 

@@ -6,4 +6,4 @@ endif
 
 let g:airline_symbols.space="\ua0"
 let g:airline_solarized_bg='dark'
-let g:airline_theme='solarized'
+let g:airline_theme='minimalist'

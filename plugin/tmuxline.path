@@ -1,0 +1,28 @@
+diff --git a/autoload/tmuxline.vim b/autoload/tmuxline.vim
+index 4e51957..eef428b 100644
+--- a/autoload/tmuxline.vim
++++ b/autoload/tmuxline.vim
+@@ -206,8 +206,8 @@ fun! tmuxline#get_global_config(line, theme)
+         \ 'status-style'                : printf('none,bg=%s', bg),
+         \ 'message-style'               : printf('fg=%s,bg=%s', message_fg, message_bg),
+         \ 'message-command-style'       : printf('fg=%s,bg=%s', message_fg, message_bg),
+-        \ 'pane-border-style'           : printf('fg=%s', pane_border),
+-        \ 'pane-active-border-style'    : printf('fg=%s', pane_active_border),
++        \ 'pane-border-style'           : printf('fg=%s,bg=colour235', pane_border),
++        \ 'pane-active-border-style'    : printf('bg=%s', pane_active_border),
+         \ 'status-justify'              : status_justify,
+         \ 'status-left-length'          : 100,
+         \ 'status-right-length'         : 100,
+diff --git a/autoload/tmuxline/util.vim b/autoload/tmuxline/util.vim
+index 417637e..fcdac34 100644
+--- a/autoload/tmuxline/util.vim
++++ b/autoload/tmuxline/util.vim
+@@ -203,6 +203,8 @@ fun! tmuxline#util#create_theme_from_airline(mode_palette)
+           \'win'  : a:mode_palette.airline_c[2:4]}
+   endif
+   call tmuxline#util#try_guess_activity_color( theme )
++  let theme.pane = [237]
++  let theme.cpane = [235]
+   return theme
+ endfun
+ 

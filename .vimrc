@@ -182,7 +182,7 @@ if &t_Co >= 256 || has("gui_running")
     let g:gruvbox_italic=1
 
     " Default theme
-    colorscheme solarized
+    colorscheme gruvbox
 
     set background=dark
 
@@ -385,9 +385,10 @@ au CompleteDone * pclose
 set timeoutlen=1000
 set ttimeoutlen=10
 " Set column color
-hi ColorColumn guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
-
-hi VertSplit guibg=#c2bfa5 guifg=grey40 gui=none cterm=reverse
+hi ColorColumn guibg=#3c3836 gui=NONE ctermbg=237 ctermfg=NONE
+let &colorcolumn='80,120'
+hi VertSplit ctermbg=235 ctermfg=Gray
+hi CursorLine guibg=#3c3836 gui=NONE ctermbg=237 ctermfg=NONE
 
 set foldmethod=expr
   \ foldexpr=lsp#ui#vim#folding#foldexpr()
