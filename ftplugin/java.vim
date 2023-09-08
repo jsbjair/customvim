@@ -1,5 +1,5 @@
 let s:lombok_path = $HOME . '/lsp/lombok.jar'
-let $JAVA_TOOL_OPTIONS = '-javaagent:'. s:lombok_path
+"let $JAVA_TOOL_OPTIONS = '-javaagent:'. s:lombok_path
 let s:java_lsp_server = {'cmd': '/bin/false'}
 if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.eclipse.equinox.launcher_1.5.700.v20200207-2156.jar'))
     let s:java_lsp_server = {
@@ -24,7 +24,7 @@ if executable('java') && filereadable(expand('~/lsp/eclipse.jdt.ls/plugins/org.e
         \ }
 endif
 
-"let g:LanguageClient_serverCommands = {
-"    \ 'java': s:java_lsp_server['cmd'],
-"    \ }
+let g:JavaComplete_UsePython3 = 1
+
+autocmd FileType java setlocal omnifunc=javacomplete#Complete
 

@@ -249,7 +249,8 @@ cabbr <expr> %% expand('%:p:h')
 " }}}
 " Automatic commands " {{{
 " Remove trailling spaces
-autocmd BufRead,BufWrite * if ! &bin | silent! %s/\s\+$//ge | endif
+autocmd BufRead,BufWrite * if ! &bin | silent! | if !count(['markdown'],&filetype) | %s/\s\+$//ge | endif | endif
+ 
 
 " Remove <Tab> from listchars for xml/html filetypes
 autocmd filetype html,xml set listchars-=tab:>-
@@ -419,3 +420,4 @@ hi Mark ctermfg=0 ctermbg=226
 nnoremap <silent> ml :call matchadd('Mark', '\%'.line('.').'l')<CR>
 nnoremap <silent> mL :call clearmatches('Mark')<CR>
 let g:SignatureMarkTextHLDynamic = 1
+
