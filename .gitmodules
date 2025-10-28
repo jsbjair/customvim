@@ -217,3 +217,15 @@
 [submodule "bundle/csv"]
 	path = bundle/csv
 	url = https://github.com/chrisbra/csv.vim.git
+[submodule "bundle/asyncomplete-lsp.vim"]
+	path = bundle/asyncomplete-lsp.vim
+	url = https://github.com/prabirshrestha/asyncomplete-lsp.vim.git
+[submodule "bundle/poetry-nvim"]
+	path = bundle/poetry-nvim
+	url = https://github.com/karloskar/poetry-nvim.git
+[submodule "bundle/taboo.vim"]
+	path = bundle/taboo.vim
+	url = https://github.com/gcmt/taboo.vim.git
+[submodule "bundle/vim-virtualenv"]
+	path = bundle/vim-virtualenv
+	url = https://github.com/jmcantrell/vim-virtualenv.git
