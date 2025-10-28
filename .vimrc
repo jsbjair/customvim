@@ -250,7 +250,7 @@ cabbr <expr> %% expand('%:p:h')
 " Automatic commands " {{{
 " Remove trailling spaces
 autocmd BufRead,BufWrite * if ! &bin | silent! | if !count(['markdown'],&filetype) | %s/\s\+$//ge | endif | endif
- 
+
 
 " Remove <Tab> from listchars for xml/html filetypes
 autocmd filetype html,xml set listchars-=tab:>-
