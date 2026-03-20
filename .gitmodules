@@ -158,10 +158,6 @@
     path = bundle/auto-pairs
     url = https://github.com/jiangmiao/auto-pairs.git
     branch = master
-[submodule "bundle/vdebug"]
-    path = bundle/vdebug
-    url = https://github.com/joonty/vdebug.git
-    branch = master
 [submodule "bundle/phpcd"]
     path = bundle/phpcd
     url = https://github.com/lvht/phpcd.vim.git
