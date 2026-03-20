@@ -23,6 +23,7 @@ set nocompatible
 
 " Set Unix file format
 set ff=unix
+set mouse=
 
 " Disable backup and swapfile, encouraging user to use some kind of version
 " control
@@ -71,7 +72,9 @@ set listchars=tab:>-,trail:.,extends:#,nbsp:.,precedes:«,extends:»
 "set listchars+=eol:¶
 
 " Toggle paste mode in insert mode
-set pastetoggle=<F2>
+if ! has('nvim')
+    set pastetoggle=<F2>
+endif
 
 " Change completion popup menu behavior
 set completeopt=longest,menuone,preview
@@ -389,7 +392,14 @@ set ttimeoutlen=10
 hi ColorColumn guibg=#3c3836 gui=NONE ctermbg=237 ctermfg=NONE
 let &colorcolumn='80,120'
 hi VertSplit ctermbg=235 ctermfg=Gray
+hi WinSeparator ctermbg=235 ctermfg=Gray
+set fillchars+=vert:\|
 hi CursorLine guibg=#3c3836 gui=NONE ctermbg=237 ctermfg=NONE
+hi CursorAgent guibg=#2C2E31 gui=NONE ctermbg=240 ctermfg=233
+
+if has('nvim')
+    set winhighlight=StatusLine:CursorAgent,StatusLineNC:CursorAgent
+endif
 
 set foldmethod=expr
   \ foldexpr=lsp#ui#vim#folding#foldexpr()
