@@ -225,3 +225,9 @@
 [submodule "bundle/vim-virtualenv"]
 	path = bundle/vim-virtualenv
 	url = https://github.com/jmcantrell/vim-virtualenv.git
+[submodule "bundle/nvim-dap"]
+	path = bundle/nvim-dap
+	url = https://github.com/mfussenegger/nvim-dap.git
+[submodule "bundle/nvim-dap-view"]
+	path = bundle/nvim-dap-view
+	url = https://github.com/igorlfs/nvim-dap-view.git
